@@ -7,8 +7,7 @@
 
 import Foundation
 
-class PlaylistService {
-    
+class PlaylistService {    
     static let shared = PlaylistService();
     
     let baseUrl: String = "https://r0yi8.sse.codesandbox.io/playlist";
