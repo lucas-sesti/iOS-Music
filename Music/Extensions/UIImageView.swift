@@ -21,14 +21,4 @@ extension UIImageView {
             }
         }
     }
-    
-    func resizeImageWithHeight(newW: CGFloat, newH: CGFloat) -> UIImage? {
-        UIGraphicsBeginImageContext(CGSize(width: newW, height: newH))
-        self.draw(CGRect(x: 0, y: 0, width: newW, height: newH))
-        
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return newImage
-    }
 }

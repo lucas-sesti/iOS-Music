@@ -7,18 +7,10 @@
 
 import UIKit
 
-class MusicsCell: UITableViewCell {
-    let tituloLabel: UILabel = {
+class MusicsCell: UITableViewCell {   
+    let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Donas do jogo"
-        label.font = .systemFont(ofSize: 16, weight: .regular)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    let testeLabel: UILabel = {
-        let label = UILabel()
-        label.text = "teste"
+        label.text = ""
         label.font = .systemFont(ofSize: 16, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -46,15 +38,15 @@ class MusicsCell: UITableViewCell {
         return iv
     }()
     
-    let artistName: UILabel = .textLabel(text: "Hyperanhas", fontSize: 14, color: .systemGray3);
+    let artistName: UILabel = .textLabel(text: "", fontSize: 14, color: .systemGray3);
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        myImageView.load(url: "https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/d/7/4/2/d74238794c3024afbcba997e444fd2cb.jpg")
+        contentView.backgroundColor = .systemBackground;
         
-        let artistInformationStack = UIStackView(arrangedSubviews: [tituloLabel, artistName]);
+        let artistInformationStack = UIStackView(arrangedSubviews: [titleLabel, artistName]);
         artistInformationStack.axis = .vertical
         
         let musicInformationStack = UIStackView(arrangedSubviews: [myImageView, artistInformationStack])
